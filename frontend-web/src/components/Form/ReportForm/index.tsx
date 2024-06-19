@@ -11,7 +11,6 @@ import { TReportFormFields } from '@/types/url';
 const options = [
   { value: 'Phishing', label: '피싱' },
   { value: 'Defacement', label: '사이트 변조' },
-  { value: 'Benign', label: '악성코드' },
   { value: 'Malware', label: '멀웨어' },
 ];
 
