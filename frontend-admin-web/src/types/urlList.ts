@@ -3,3 +3,7 @@ export type TURLList = {
     url: string;
     label: string;
 };
+
+export type TURLIds = {
+    url_list: number[];
+};

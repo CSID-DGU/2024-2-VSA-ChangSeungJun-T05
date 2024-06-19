@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const ColumnContainer = styled.div`
-    min-width: 300px;
+    min-width: 400px;
     width: 60%;
+    max-width: 1000px;
     position: relative;
     display: flex;
     flex-direction: column;
