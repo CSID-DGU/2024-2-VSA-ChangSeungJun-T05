@@ -1,12 +1,12 @@
+import React from 'react';
 import styled from 'styled-components';
-import theme from '../../theme';
+import theme from '@/theme';
 
 export const NavBar = styled.div`
   display: flex;
   align-items: center;
   padding: 0 20px;
   width: 100%;
-  box-sizing: border-box;
   height: 52px;
   background-color: #3c96e8;
   z-index: 1;

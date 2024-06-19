@@ -1,3 +1,4 @@
+import React from 'react';
 import StyledComponentsRegistry from '@/lib/registry'
 import QueryClientContext from '@/context/queryClientProvider'
 import { GlobalStyle } from '@/style'

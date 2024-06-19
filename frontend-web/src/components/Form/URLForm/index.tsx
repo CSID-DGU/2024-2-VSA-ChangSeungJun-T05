@@ -1,6 +1,7 @@
+import React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { FormComponent } from '..';
-import theme from '../../../theme';
+import theme from '@/theme';
 import { useGetUrl } from '@/hooks/useGetUrl';
 import { useState } from 'react';
 import FormSubmitButton from '@/components/Button/FormSubmitButton';
