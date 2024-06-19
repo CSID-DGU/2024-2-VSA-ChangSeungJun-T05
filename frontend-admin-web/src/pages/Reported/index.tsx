@@ -35,7 +35,7 @@ export default function Reported() {
     <PageLayout>
       <RemoveButton onClick={handleDeleteUrl}/>
       <Styled.Container>
-        {reportedUrlData.map((urlData) => (
+        {reportedUrlData.map((urlData: TURLList) => (
           <URLList key={urlData.url_id} urlData={urlData} onToggle={() => toggleId(urlData.url_id)} selected={selectedIds.url_list.includes(urlData.url_id)} />
         ))}
       </Styled.Container>
