@@ -8,7 +8,7 @@ import { useGetUrlList } from '@/hooks/useGetUrlList'
 import { usePostUrl } from '@/hooks/usePostUrl'
 
 export default function Reported() {
-  //const { reportedUrlData } = useGetUrlList(); // TODO: 이걸로 수정해야함
+  const { reportedUrlData } = useGetUrlList(); // TODO: 이걸로 수정해야함
   const [selectedIds, setSelectedIds] = useState<TURLIds>({ url_list: [] });
   const { mutate } = usePostUrl();
 
