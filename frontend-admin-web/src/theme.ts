@@ -10,6 +10,9 @@ declare module 'styled-components' {
     | 'formBorder'
     | 'whiteText'
     | 'cardColor'
+    | 'red'
+    | 'purple'
+    | 'orange'
 ;
 
   export interface DefaultTheme {
@@ -28,6 +31,9 @@ const colors = {
   formBorder: '#85bef2',
   whiteText: '#FFFFFF',
   cardColor: '#F6F7FB',
+  red: '#FF0000',
+  purple: '#800080',
+  orange: '#FFA500',
 };
 const theme: DefaultTheme = {
   colors,

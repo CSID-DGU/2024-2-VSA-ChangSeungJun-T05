@@ -5,13 +5,12 @@ import NavBar from '../NavBar';
 export interface IPageLayout {
   children: React.ReactNode;
   title?: string;
-  overflowY?: string;
 }
 
-export default function PageLayout({ children, title, overflowY }: IPageLayout) {
+export default function PageLayout({ children, title }: IPageLayout) {
   return (
     <>
-      <Style.Layout overflowY={overflowY}>
+      <Style.Layout>
         <Style.Wrapper>
           {children}
           <NavBar title={title} />

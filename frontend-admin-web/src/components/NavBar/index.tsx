@@ -10,7 +10,7 @@ export default function NavBar({ title }: Props) {
   return (
     <Styled.NavBar>
       <HomeButton>
-        DRL
+        DRL Admin
       </HomeButton>
       <Styled.Title>{title}</Styled.Title>
     </Styled.NavBar>

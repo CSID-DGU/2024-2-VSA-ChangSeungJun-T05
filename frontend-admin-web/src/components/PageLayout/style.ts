@@ -7,7 +7,7 @@ export const Layout = styled.div<IPageLayout>`
   display: flex;
   justify-content: center;
   overflow-x: hidden;
-  overflow-y: ${props => props.overflowY};
+  overflow-y: hidden;
   position: relative;
 `;
 

@@ -32,3 +32,5 @@ export interface HomeButtonProps extends Partial<ButtonProps> {}
 
 export interface LoginButtonProps extends Partial<ButtonProps> {}
 
+export interface RemoveButtonProps extends Partial<ButtonProps> {}
+
