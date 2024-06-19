@@ -7,7 +7,7 @@ export const NavBar = styled.div`
   padding: 0 20px;
   width: 100%;
   height: 52px;
-  background-color: #3c96e8;
+  background-color: ${theme.colors.primary};
   z-index: 1;
   position: fixed;
   top: 0;

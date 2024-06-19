@@ -5,6 +5,7 @@ export default function Button(props: ButtonProps) {
 
   return (
     <Styled.Button
+      minWidth={props.minWidth}
       width={props.width}
       height={props.height}
       margin={props.margin}

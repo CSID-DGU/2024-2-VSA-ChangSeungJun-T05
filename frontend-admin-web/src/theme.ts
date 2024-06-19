@@ -2,6 +2,7 @@ import { DefaultTheme } from 'styled-components';
 
 declare module 'styled-components' {
   export type DefaultThemeColorKey =
+    | 'primary'
     | 'title1'
     | 'title2'
     | 'title3'
@@ -19,6 +20,7 @@ declare module 'styled-components' {
 }
 
 const colors = {
+  primary: '#3c96e8',
   title1: '#252525',
   title2: '#797979',
   title3: '#B4B6BC',

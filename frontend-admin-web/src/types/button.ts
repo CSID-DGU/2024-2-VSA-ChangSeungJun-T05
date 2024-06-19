@@ -3,6 +3,7 @@ export interface ButtonProps {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   route?: string;
   children?: React.ReactNode;
+  minWidth?: string;
   width: string;
   height: string;
   margin?: string;
@@ -29,5 +30,5 @@ export interface ButtonProps {
 
 export interface HomeButtonProps extends Partial<ButtonProps> {}
 
-export interface FormSubmitButtonProps extends Partial<ButtonProps> {}
+export interface LoginButtonProps extends Partial<ButtonProps> {}
 

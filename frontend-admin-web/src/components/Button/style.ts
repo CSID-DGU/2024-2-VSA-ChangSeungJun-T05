@@ -8,6 +8,7 @@ export const Button = styled.button<ButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: ${props => `${props.minWidth}`};
   width: ${props => `${props.width}`};
   height: ${props => `${props.height}`};
   margin: ${props => `${props.margin}`};
