@@ -1,5 +1,3 @@
-// use client
-
 import { ButtonProps } from '@/types/button';
 import * as Styled from './style';
 
