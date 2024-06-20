@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from '@/components/Button';
 import { RemoveButtonProps } from '@/types/button';
 import theme from '@/theme';

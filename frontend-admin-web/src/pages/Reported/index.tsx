@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import * as Styled from './style'
 import PageLayout from '@/components/PageLayout'
 import RemoveButton from '@/components/Button/RemoveButton'
