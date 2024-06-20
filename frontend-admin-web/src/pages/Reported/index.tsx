@@ -8,7 +8,7 @@ import { useGetUrlList } from '@/hooks/useGetUrlList'
 import { usePostUrl } from '@/hooks/usePostUrl'
 
 export default function Reported() {
-  const { reportedUrlData } = useGetUrlList(); // TODO: 이걸로 수정해야함
+  const { reportedUrlData } = useGetUrlList();
   const [selectedIds, setSelectedIds] = useState<TURLIds>({ url_list: [] });
   const { mutate } = usePostUrl();
 
@@ -43,66 +43,3 @@ export default function Reported() {
     </PageLayout>
   )
 }
-
-const reportedUrlData : TURLList[] = [
-  {
-    url_id: 1,
-    label: 'Phishing',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 2,
-    label: 'Defacement',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 3,
-    label: 'Phishing',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 4,
-    label: 'Malware',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 5,
-    label: 'Defacement',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 6,
-    label: 'Malware',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 7,
-    label: 'Phishing',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 8,
-    label: 'Phishing',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 9,
-    label: 'Malware',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 10,
-    label: 'Defacement',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 11,
-    label: 'Malware',
-    url: 'https://www.google.com'
-  },
-  {
-    url_id: 12,
-    label: 'Defacement',
-    url: 'https://www.google.com'
-  }
-]
