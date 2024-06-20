@@ -7,6 +7,7 @@ import * as Styled from './style';
 import FormSubmitButton from '@/components/Button/FormSubmitButton';
 import { usePostReportUrl } from '@/hooks/usePostReportUrl';
 import { TReportFormFields } from '@/types/url';
+import { urlPattern } from '@/utils/urlPattern';
 
 const options = [
   { value: 'Phishing', label: '피싱' },
@@ -19,51 +20,49 @@ export default function ReportForm() {
 
   const validationSchema = yup.object().shape({
     reportOption: yup.string().required('신고사유를 선택하세요'),
-    url: yup.string().required('url을 입력하세요'),
+    url: yup.string().matches(urlPattern, '유효한 URL을 입력해주세요').required('URL을 입력하세요'),
   });
 
   const methods = useForm<TReportFormFields>({
     mode: 'onChange',
-    defaultValues: {
-      reportOption: '',
-      url: '',
-    },
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = (formData: TReportFormFields) => {
+  const onSubmit = methods.handleSubmit((formData) => {
     mutate(formData, {
-      onSuccess: (response) => {
-        alert("신고가 완료되었어요. 감사합니다!")
+      onSuccess: () => {
+        alert("신고가 완료되었습니다. 감사합니다!");
       },
-      onError: (error) => {
-        alert("신고에 실패했어요. 다시 시도해주세요.")
+      onError: () => {
+        alert("신고에 실패했습니다. 다시 시도해주세요.");
       }
     });
-  };
-  
+  });
+
+  const { errors } = methods.formState;
+
   return (
     <>
       <FormProvider {...methods}>
-        <FormComponent>
+        <FormComponent onSubmit={onSubmit}>
           <FormComponent.Label htmlFor="reportOption">악성 URL 신고하기</FormComponent.Label>
           <FormComponent.Dropdown 
-            name={'reportOption'} 
-            options={options} 
-            placeholder="신고 사유를 선택하세요" 
+            name="reportOption"
+            options={options}
+            placeholder="신고 사유를 선택하세요"
           />
           <Styled.InputWrapper>
             <FormComponent.Input
+              name="url"
               placeholder="의심되는 URL을 작성해주세요."
-              {...methods.register('url')}
               borderColor="none"
               width='70%'
             />
-            <FormSubmitButton onClick={() => onSubmit(methods.getValues())}/>
+            <FormSubmitButton type="submit" />
           </Styled.InputWrapper>
+          {errors.url && <Styled.ErrorMessage style={{ color: 'red' }}>{errors.url.message}</Styled.ErrorMessage>}
         </FormComponent>
       </FormProvider>
     </>
   );
-  
 }
