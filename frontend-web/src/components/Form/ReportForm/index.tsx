@@ -4,10 +4,10 @@ import { FormComponent } from '..';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Styled from './style';
-import FormSubmitButton from '@/components/Button/FormSubmitButton';
 import { usePostReportUrl } from '@/hooks/usePostReportUrl';
 import { TReportFormFields } from '@/types/url';
 import { urlPattern } from '@/utils/urlPattern';
+import ReportFormSubmitButton from '@/components/Button/ReportFormSubmitButton';
 
 const options = [
   { value: 'Phishing', label: '피싱' },
@@ -59,7 +59,7 @@ export default function ReportForm() {
               borderColor="none"
               width='70%'
             />
-            <FormSubmitButton type="submit" />
+            <ReportFormSubmitButton type="submit" />
           </Styled.InputWrapper>
           {errors.url && <Styled.ErrorMessage style={{ color: 'red' }}>{errors.url.message}</Styled.ErrorMessage>}
         </FormComponent>
