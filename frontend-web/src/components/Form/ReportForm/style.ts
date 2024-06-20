@@ -7,3 +7,9 @@ export const InputWrapper = styled.div`
     display: flex;
     justify-content: center;
 `;
+
+export const ErrorMessage = styled.p`
+    color: red;
+    font-size: 16px;
+    margin-top: 0px;
+`;

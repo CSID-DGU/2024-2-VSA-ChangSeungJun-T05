@@ -14,3 +14,10 @@ export const URLResult = styled.div`
     margin-top: 8px;
     text-align: center;
 `;
+
+
+export const ErrorMessage = styled.p`
+    color: red;
+    font-size: 16px;
+    margin-top: 0px;
+`;

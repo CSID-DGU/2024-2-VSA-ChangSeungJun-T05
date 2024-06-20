@@ -5,6 +5,7 @@ import * as Styled from './style';
 interface Props {
   children: React.ReactNode;
   alignItems?: string;
+  onSubmit?: (e?: React.FormEvent<HTMLFormElement>) => void;
 }
 
 export interface IFormInputStyleProps {
@@ -15,15 +16,23 @@ export interface IFormInputStyleProps {
   borderColor?: string;
 }
 
-function FormComponent({ children, alignItems }: Props) {
+function FormComponent({ children, onSubmit, ...props }: Props) {
   const methods = useFormContext();
-  return <Styled.Form alignItems={alignItems} onSubmit={methods.handleSubmit(data => console.log(data))}>
-    {children}
-  </Styled.Form>;}
 
-function FormInput({ name, placeholder, ...formInputStyleProps }: { name: string; placeholder: string; } & IFormInputStyleProps) {
+  return (
+    <Styled.Form onSubmit={(e) => {
+      e.preventDefault(); // 폼 기본 제출 동작 방지
+      if (onSubmit) onSubmit(e); // Props로 받은 onSubmit 실행
+      methods.handleSubmit(data => console.log(data))(); // useFormContext로 받은 handleSubmit 실행
+    }} {...props}>
+      {children}
+    </Styled.Form>
+  );
+}
+
+function FormInput({ type, name, placeholder, ...formInputStyleProps }: { type?: string; name: string; placeholder: string; } & IFormInputStyleProps) {
   const { register } = useFormContext();
-  return <Styled.Input {...register(name, { required: true })} placeholder={placeholder} {...formInputStyleProps} />
+  return <Styled.Input {...register(name, { required: true })} type={type || 'text'}  placeholder={placeholder} {...formInputStyleProps} />
   ;
 }
 
