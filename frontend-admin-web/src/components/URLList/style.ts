@@ -48,8 +48,10 @@ export const URLText = styled.p`
     font-weight: 600;
     color: ${theme.colors.title1};
     white-space: nowrap;
+    overflow: auto;
     @media (max-width: 768px) {
         font-size: 12px;
+        width: 180px;
     }
 `;
 
