@@ -1,6 +1,6 @@
 import Button from '..';
 import { FormSubmitButtonProps } from '@/types/button';
-import SearchIcon from '@/assets/icons/search.svg';
+import SearchIcon from '@/assets/icons/search.png';
 export default function FormSubmitButton(props: FormSubmitButtonProps) {
   return (
     <Button

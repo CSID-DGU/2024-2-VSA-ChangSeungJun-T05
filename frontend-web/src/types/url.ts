@@ -1,4 +1,9 @@
 export type TUrl = {
     url: string;
-    type: number;
+    type: string;
+}
+
+export type TReportFormFields = {
+    reportOption: string;
+    url: string;
 }
