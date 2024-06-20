@@ -1,4 +1,5 @@
 "use client"
+
 import React from 'react';
 import * as Styled from './style';
 import HomeButton from '../Button/HomeButton';
