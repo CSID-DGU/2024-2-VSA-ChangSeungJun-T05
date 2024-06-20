@@ -1,5 +1,6 @@
 // use client
 
+import React from 'react';
 import { ButtonProps } from '@/types/button';
 import * as Styled from './style';
 

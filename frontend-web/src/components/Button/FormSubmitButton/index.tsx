@@ -1,3 +1,4 @@
+import React from 'react';
 import Button from '..';
 import { FormSubmitButtonProps } from '@/types/button';
 import SearchIcon from '@/assets/icons/search.png';

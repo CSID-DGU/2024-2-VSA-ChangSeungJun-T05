@@ -1,5 +1,6 @@
 "use client"
 
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import * as Styled from './style';
 import URLForm from '../components/Form/URLForm';

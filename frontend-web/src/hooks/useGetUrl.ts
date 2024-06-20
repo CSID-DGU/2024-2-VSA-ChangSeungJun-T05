@@ -1,5 +1,5 @@
+import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getUrl } from '@/app/api/getUrl';
 import { getUrlQueryKey } from '@/constants/queryKeys';
 
 export const useGetUrl = (url: string) => {
