@@ -1,5 +1,5 @@
 import { isAxiosError } from 'axios';
-import { instance } from './axios';
+import { instance } from '@apis/axios';
 
 export const postReportUrl = async (url: string, type: string) => {
   try {

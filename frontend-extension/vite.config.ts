@@ -18,6 +18,7 @@ export default defineConfig({
       '@src': srcDir,
       '@assets': resolve(srcDir, 'assets'),
       '@pages': pagesDir,
+      '@apis': resolve(srcDir, 'apis'),
     },
   },
   plugins: [...getPlugins(isDev), react()],
