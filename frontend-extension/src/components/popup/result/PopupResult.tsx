@@ -1,8 +1,9 @@
 import { SearchResult } from '@root/src/pages/models/SearchResult';
 import { styled } from 'styled-components';
 
-import icon_dangerouse from '../icon/dangerous.svg';
-import icon_not_dangerouse from '../icon/not_dangerous.svg';
+import icon_dangerouse from '../../../assets/img/logo.svg';
+import icon_not_dangerouse from '../../../assets/img/logo.svg';
+
 import { getUrl } from '@root/src/api/getUrl';
 import { useEffect } from 'react';
 import { useState } from 'react';

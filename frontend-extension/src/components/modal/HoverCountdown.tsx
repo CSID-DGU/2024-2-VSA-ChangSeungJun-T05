@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import PopupResult from '../popup/result/PopupResult';
 import { useRef } from 'react';
 
-import icon_search from './icon/search.svg';
+import icon_search from '../../assets/img/logo.svg';
 
 const HoverCountdown = () => {
   const [_url, _setUrl] = useState<string>('');

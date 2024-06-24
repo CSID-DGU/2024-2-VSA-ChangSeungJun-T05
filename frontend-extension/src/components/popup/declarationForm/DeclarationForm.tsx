@@ -7,7 +7,7 @@ import DeclarationButton from './DeclarationButton';
 import { declarationOptions, declarationReasonToOption } from './DeclarationEnum';
 import { postReportUrl } from '@root/src/api/postDeclarationURL';
 
-import icon_not_dangerouse from '../icon/not_dangerous.svg';
+import icon_not_dangerouse from '../../../assets/img/logo.svg';
 
 /**
  *
