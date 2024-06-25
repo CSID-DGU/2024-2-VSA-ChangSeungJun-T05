@@ -1,69 +1,69 @@
 @font-face {
   font-family: Pretendard-Regular;
-  src: url('../assets/font/Pretendard-Regular.woff') format('woff');
+  /* src: url('../assets/font/Pretendard-Regular.woff') format('woff'); */
 }
 
 @font-face {
   font-family: Pretendard-Medium;
-  src: url('../assets/font/Pretendard-Medium.woff') format('woff');
+  /* src: url('../assets/font/Pretendard-Medium.woff') format('woff'); */
 }
 
 .H3 {
   font-family: Pretendard-Regular;
-  font-size: 3rem;
+  font-size: 48px;
   line-height: calc(56 / 48);
 }
 .H4 {
   font-family: Pretendard-Regular;
-  font-size: 2.125rem;
+  font-size: 34px;
   line-height: calc(40 / 34);
   letter-spacing: 0.25px;
 }
 .H5 {
   font-family: Pretendard-Regular;
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: calc(28 / 24);
 }
 .H6 {
   letter-spacing: 0.15px;
   font-family: Pretendard-Medium;
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: calc(28 / 20);
 }
 
 /* Subheader */
 .Sh1 {
-  letter-spacing: 0.15px;
+  letter-spacing: calc(0.15px);
   font-family: Pretendard-Medium;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: calc(28 / 16);
 }
 .Sh2 {
   letter-spacing: 1px;
   font-family: Pretendard-Medium;
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: calc(24 / 14);
 }
 
 /* Body */
 .B1 {
-  letter-spacing: -0.5px;
+  letter-spacing: calc(15px / 100 * -1);
   font-family: Pretendard-Regular;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: calc(28 / 16);
 }
 .B2 {
-  letter-spacing: -0.25px;
+  letter-spacing: calc(25px / 100 * -1);
   font-family: Pretendard-Regular;
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: calc(24 / 14);
 }
 
 /* Button */
 .Btn {
-  letter-spacing: -0.5px;
+  letter-spacing: calc(50px / 100 * -1);
   font-family: Pretendard-Medium;
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: calc(16 / 14);
 }
 
@@ -71,7 +71,7 @@
 .Ove {
   letter-spacing: 1.5px;
   font-family: Pretendard-Regular;
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: calc(12 / 10);
 }
 
@@ -79,6 +79,6 @@
 .Cap {
   letter-spacing: 1.5px;
   font-family: Pretendard-Regular;
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: calc(14 / 12);
 }

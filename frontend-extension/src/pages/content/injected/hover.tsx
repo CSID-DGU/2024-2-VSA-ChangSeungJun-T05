@@ -1,15 +1,18 @@
 import ReactDOM from 'react-dom';
 
 import refreshOnUpdate from 'virtual:reload-on-update-in-view';
-import HoverCountdown from '@root/src/components/modal/HoverCountdown';
+
+import injectedStyle from '@src/styles/font.css?inline';
+import HoverModalInjected from './HoverModalInjected';
 
 refreshOnUpdate('pages/content/injected/mouseover');
 
-const App = () => {
-  // return <HoverModal />;
-  return <HoverCountdown />;
-};
+const styleElement = document.createElement('style');
+styleElement.innerHTML = injectedStyle;
 
 const modalRoot = document.createElement('div');
+
+document.head.appendChild(styleElement);
 document.body.appendChild(modalRoot);
-ReactDOM.render(<App />, modalRoot);
+
+ReactDOM.render(<HoverModalInjected />, modalRoot);

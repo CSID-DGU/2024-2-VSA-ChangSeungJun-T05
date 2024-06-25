@@ -1,14 +1,17 @@
 import { useEffect } from 'react';
-import useCountdown from './useCountdown';
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import PopupResult from '../popup/result/PopupResult';
 import { useRef } from 'react';
 
-import icon_search from '../../assets/img/logo.svg';
+import { HoverModal } from '@src/components/hover/modal/HoverModal';
+import { SearchHoverModal } from '@src/components/hover/modal/HoverModal.stories';
 
-const HoverCountdown = () => {
+import useCountdown from '@src/components/modal/useCountdown';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import HoverResult from './HoverResult';
+
+const HoverModalInjected = () => {
   const [_url, _setUrl] = useState<string>('');
   const url = useRef(_url);
   const setUrl = (value: string) => {
@@ -61,16 +64,15 @@ const HoverCountdown = () => {
   const handleMouseLeave = (event: MouseEvent) => {
     let element = getAnchorElement(event.target);
 
-    element.style.backgroundColor = '';
+    if (element) {
+      element.style.backgroundColor = '';
+    }
+
     setUrl('');
     stopCountdown();
     setIsModalOpen(false);
     setIsSearched(false);
   };
-
-  useEffect(() => {
-    console.log('currentURL:', url.current);
-  }, [url]);
 
   useEffect(() => {
     document.addEventListener('mouseover', handleMouseEnter);
@@ -81,46 +83,36 @@ const HoverCountdown = () => {
       document.removeEventListener('mouseout', handleMouseLeave);
     };
   }, []);
-
+  const queryClient = new QueryClient();
   return (
-    <div
-      style={{
-        position: 'fixed',
-        left: `${position.x + 5}px`,
-        top: `${position.y + 5}px`,
-        zIndex: '9999999999',
-        visibility: getIsModalOpen,
-      }}>
-      {isSearched ? (
-        <ModalWrapper className="">
-          <PopupResult url={url.current} />
-        </ModalWrapper>
-      ) : (
-        <ModalWrapperLoading className="ani_fadein">
-          <ResultTitle>
-            <img src={icon_search} alt="Dangerous site" />
-            <ResultLabel className="B1 dangerous">{countdown}초 뒤 분석이 진행됩니다.</ResultLabel>
-          </ResultTitle>
-          <UrlLabel className="B2">{url.current}</UrlLabel>
-        </ModalWrapperLoading>
-      )}
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div
+        style={{
+          position: 'fixed',
+          left: `${position.x + 5}px`,
+          top: `${position.y + 5}px`,
+          zIndex: '9999999999',
+          visibility: getIsModalOpen,
+        }}>
+        {isSearched ? (
+          <HoverResult url={url.current} />
+        ) : (
+          <ModalWrapperLoading className="ani_fadein">
+            <HoverModal
+              {...SearchHoverModal.args}
+              label={`${countdown}초 뒤 분석이 진행됩니다.`}
+              caption={`${url.current}`}
+            />
+          </ModalWrapperLoading>
+        )}
+      </div>
+    </QueryClientProvider>
   );
 };
 
-export default HoverCountdown;
+export default HoverModalInjected;
 
 const ModalWrapperLoading = styled.div`
-  max-width: 320px;
-  padding: 1.5rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  border: 1px solid gray;
-  background-color: white;
-  border-radius: 8px;
-  color: black;
-
   animation: fadein 3s;
 
   @keyframes fadein {
@@ -131,56 +123,4 @@ const ModalWrapperLoading = styled.div`
       opacity: 1;
     }
   }
-`;
-
-const ModalWrapper = styled.div`
-  max-width: 320px;
-  padding: 1.5rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  border: 1px solid gray;
-  background-color: white;
-  border-radius: 8px;
-  color: black;
-`;
-
-const ResultTitle = styled.div`
-  display: flex;
-  gap: 8px;
-  align-items: center;
-
-  .img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .B1 {
-    letter-spacing: -0.5px;
-    font-family: Pretendard-Regular;
-    font-size: 16px;
-    line-height: calc(28 / 16);
-  }
-`;
-
-const ResultLabel = styled.div`
-  .B1 {
-    letter-spacing: -0.5px;
-    font-family: Pretendard-Regular;
-    font-size: 16px;
-    line-height: calc(28 / 16);
-  }
-`;
-
-const UrlLabel = styled.div`
-  .B2 {
-    letter-spacing: -0.25px;
-    font-family: Pretendard-Regular;
-    font-size: 0.875rem;
-    line-height: calc(24 / 14);
-  }
-
-  word-break: break-all;
-
-  color: lightgray;
 `;
