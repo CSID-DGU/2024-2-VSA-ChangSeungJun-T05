@@ -1,1 +1,1 @@
-import('@pages/content/injected/hover');
+import('@pages/content/injected/script');

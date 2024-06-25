@@ -17,7 +17,7 @@ export default defineConfig({
       '@root': rootDir,
       '@src': srcDir,
       '@assets': resolve(srcDir, 'assets'),
-
+      '@hooks': resolve(srcDir, 'hooks'),
       '@pages': pagesDir,
       '@apis': resolve(srcDir, 'apis'),
     },
