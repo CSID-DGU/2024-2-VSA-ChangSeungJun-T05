@@ -7,7 +7,7 @@ import { useRef } from 'react';
 import { HoverModal } from '@src/components/hover/modal/HoverModal';
 import { SearchHoverModal } from '@src/components/hover/modal/HoverModal.stories';
 
-import useCountdown from '@hooks/useCountdown';
+import useCountdown from '@hooks/common/useCountdown';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import HoverResult from './HoverResult';
 

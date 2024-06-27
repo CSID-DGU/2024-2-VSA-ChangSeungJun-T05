@@ -1,7 +1,8 @@
 import { DangerousHoverModal, LaodingHoverModal, SafeHoverModal } from '@src/components/hover/modal/HoverModal.stories';
 import { HoverModal } from '@src/components/hover/modal/HoverModal';
-import { useGetUrl } from '@src/apis/getUrl/useGetURL';
+
 import { TgetUrlResponse } from '@src/apis/getUrl/_type';
+import { useGetUrl } from '@root/src/hooks/apis/useGetURL';
 
 interface HoverResultProps {
   url: string;

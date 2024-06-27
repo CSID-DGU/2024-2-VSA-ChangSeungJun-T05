@@ -5,7 +5,7 @@ import { Label } from '@src/components/common/atoms/label/Label';
 import { SafeLabel } from '@src/components/common/atoms/label/Label.stories';
 import { SearchBar } from '@src/components/common/molecules/searchBar/SearchBar';
 import { Select } from '@src/components/common/atoms/select/Select';
-import { usePostReportUrl } from '@root/src/apis/postReportUrl/usePostReportURL';
+import { usePostReportUrl } from '@hooks/apis/usePostReportURL';
 
 /**
  *
