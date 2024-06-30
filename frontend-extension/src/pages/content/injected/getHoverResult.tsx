@@ -2,21 +2,8 @@ import { DangerousHoverModal, LaodingHoverModal, SafeHoverModal } from '@src/com
 import { HoverModal } from '@src/components/hover/modal/HoverModal';
 
 import { TgetUrlResponse } from '@src/apis/getUrl/_type';
-import { useGetUrl } from '@root/src/hooks/apis/useGetURL';
 
-interface HoverResultProps {
-  url: string;
-}
-
-const HoverResult: React.FC<HoverResultProps> = ({ url }) => {
-  const { data, isLoading, error } = useGetUrl(url);
-
-  return getHoverResult(isLoading, data, error);
-};
-
-export default HoverResult;
-
-const getHoverResult = (isLoading: boolean, data: TgetUrlResponse, error: Error) => {
+export const getHoverResult = (data: TgetUrlResponse, isLoading?: boolean, error?: Error) => {
   if (isLoading) {
     return <HoverModal {...LaodingHoverModal.args} />;
   }
