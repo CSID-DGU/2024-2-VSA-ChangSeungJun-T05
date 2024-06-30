@@ -3,14 +3,15 @@ import { styled } from 'styled-components';
 import withSuspense from '@src/shared/hoc/withSuspense';
 import withErrorBoundary from '@src/shared/hoc/withErrorBoundary';
 
-import TitleLabel from '@root/src/components/common/TitleLabel';
-import DeclarationForm from '@root/src/components/popup/declarationForm/DeclarationForm';
+import { Label } from '@root/src/components/common/atoms/label/Label';
+import { DefaultLabel } from '@root/src/components/common/atoms/label/Label.stories';
+import ReportUrlForm from './ReportUrlForm';
 
 const Popup = () => {
   return (
     <PopupWrapper>
-      <TitleLabel className={'H6 title'}>악성 URL 신고</TitleLabel>
-      <DeclarationForm />
+      <Label {...DefaultLabel.args} label="악성 URL 신고하기" />
+      <ReportUrlForm />
     </PopupWrapper>
   );
 };
