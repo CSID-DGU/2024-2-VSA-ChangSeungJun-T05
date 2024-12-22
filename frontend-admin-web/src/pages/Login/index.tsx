@@ -18,6 +18,7 @@ export default function Login() {
   });
 
   const onSubmit = (data: TLoginForm) => {
+    // Role 확인 후 이동
     if(data.id === 'admin' && data.password === 'admin') {
       navigate('/reported')
     }

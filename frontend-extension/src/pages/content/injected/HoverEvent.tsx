@@ -13,7 +13,7 @@ import { getHoverResult } from './getHoverResult';
 import { TgetUrlResponse } from '@root/src/apis/getUrl/_type';
 import { useGetUrl } from '@root/src/hooks/apis/useGetURL';
 
-const MAX_ITEMS = 20; // 최대 보관할 항목
+const MAX_ITEMS = 20;
 
 const HoverEvent = () => {
   const [_url, _setUrl] = useState<string>('');
@@ -35,9 +35,7 @@ const HoverEvent = () => {
         urlData = JSON.parse(localStorageData);
       }
 
-      // Ensure we don't exceed MAX_ITEMS
       if (Object.keys(urlData).length >= MAX_ITEMS) {
-        // Remove the oldest item (FIFO strategy)
         const oldestKey = Object.keys(urlData)[0];
         delete urlData[oldestKey];
       }
