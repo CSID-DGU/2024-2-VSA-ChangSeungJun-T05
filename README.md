@@ -1,4 +1,4 @@
-# 2024-1-CECD1-EJO-2
+# ChangSeungJun
 
 # GitHub Role
 This repository follows the following conventions.
