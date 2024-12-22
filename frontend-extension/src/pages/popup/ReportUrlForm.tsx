@@ -8,7 +8,6 @@ import { Select } from '@src/components/common/atoms/select/Select';
 import { usePostReportUrl } from '@hooks/apis/usePostReportURL';
 
 /**
- *
  * @returns 신고 URL과 사유를 입력하는 폼입니다.
  */
 const declarationOptionConfig = [
