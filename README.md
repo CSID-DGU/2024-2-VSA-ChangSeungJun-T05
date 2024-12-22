@@ -1,42 +1,49 @@
-# ChangSeungJun
+# 💻2024 2 VSA ChangSeungJun T05
+## 🚀 소개
+### 프로젝트 소개
+AI를 활용한 악성 URL 판독 서비스
 
-# GitHub Role
-This repository follows the following conventions.
+## 🛠️ 기술 스택
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) 
 
-## Commit Convention
-| Commit Type | Description |
-| --- | --- |
-| feat | Add new features |
-| fix | Fix bugs |
-| docs | Modify documentation |
-| style | Code formatting, missing semicolons, no changes to the code itself |
-| refactor | Code refactoring |
-| test | Add test code, refactor test code |
-| chore | Modify package manager, and other miscellaneous changes (e.g., .gitignore) |
-| design | Change user UI design, such as CSS |
-| comment | Add or modify necessary comments |
-| rename | Only changes to file or folder names or locations |
-| remove | Only performing the action of deleting files |
-
-## PR Convention
-| Icon | Code | Description |
-| --- | --- | --- |
-| 🧑🏻‍🎨 | :art | Improve code structure/formatting |
-| ⚡️ | :zap | Performance improvement |
-| 🔥 | :fire | Delete code/files |
-| 🐛 | :bug | Fix bugs |
-| 🚑 | :ambulance | Urgent fixes |
-| ✨ | :sparkles | Introduce new features |
-| 💄 | :lipstick | Add/modify UI/style files |
-| ⏪ | :rewind | Revert changes |
-| 🔀 | :twisted_rightwards_arrows | Merge branches |
-| 💡 | :bulb | Add/modify comments |
-| 🗃 | :card_file_box | Database-related changes |
+| **Category** | **Stack** |
+|:------------:|:----------:|
+| **Back-end** | `Java`, `Node.js` |
+| **Front-end** | `TypeScript`, `React` |
+| Uncategorized | `HTML5`, `CSS3`, `Spring` |
 
 
-제목은 50글자 이내로 작성한다.
-첫글자는 대문자로 작성한다.
-마침표 및 특수기호는 사용하지 않는다.
-영문으로 작성하는 경우 동사(원형)을 가장 앞에 명령어로 작성한다.
-과거시제는 사용하지 않는다.
-간결하고 요점적으로 즉, 개조식 구문으로 작성한다.
+## 💻 설치 방법
+1. 저장소 복제
+```bash
+git clone [레포지토리 URL]
+cd [프로젝트명]
+```
+
+2. 의존성 설치
+```bash
+npm install
+# 또는
+yarn install
+```
+
+3. 개발 서버 실행
+```bash
+npm run dev
+# 또는
+yarn dev
+```
+
+4. 빌드
+```bash
+npm run build
+# 또는
+yarn build
+```
+
+## 👥 팀원
+| **Name** | **Position** |
+|:--------:|:------------:|
+| **강승준** | `Backend` |
+| **이창준** | `Frontend` |
+
